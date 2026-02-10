@@ -1,0 +1,173 @@
+.about {
+  padding: var(--spacing-3xl) 0;
+  background: var(--color-bg-secondary);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-lead {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.7;
+}
+
+.about-lead strong {
+  color: var(--color-primary-light);
+}
+
+.about-text p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.7;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.highlight {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-base);
+}
+
+.highlight:hover {
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+.highlight-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(34, 211, 238, 0.1));
+  border-radius: var(--radius-md);
+  color: var(--color-primary-light);
+}
+
+.highlight-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.highlight-content p {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.about-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-placeholder {
+  width: 300px;
+  height: 300px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.image-placeholder .initials {
+  font-size: 5rem;
+  font-weight: 800;
+  color: white;
+  opacity: 0.9;
+}
+
+.image-decoration {
+  position: absolute;
+  inset: -20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  transform: rotate(6deg);
+}
+
+.tech-float {
+  position: absolute;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: float 4s ease-in-out infinite;
+}
+
+.tech-1 {
+  top: 20px;
+  left: 0;
+  animation-delay: 0s;
+}
+
+.tech-2 {
+  top: 60px;
+  right: -20px;
+  animation-delay: 0.5s;
+}
+
+.tech-3 {
+  bottom: 80px;
+  left: -40px;
+  animation-delay: 1s;
+}
+
+.tech-4 {
+  bottom: 20px;
+  right: 0;
+  animation-delay: 1.5s;
+}
+
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .image-placeholder {
+    width: 250px;
+    height: 250px;
+  }
+
+  .image-placeholder .initials {
+    font-size: 4rem;
+  }
+}
