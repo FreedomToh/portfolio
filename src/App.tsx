@@ -1,5 +1,5 @@
 import { Header } from './components/Header'
-import { Hero } from './components/Hero'
+import { Me } from './components/Me'
 import { About } from './components/About'
 import { Experience } from './components/Experience'
 import { Skills } from './components/Skills'
@@ -12,7 +12,7 @@ function App() {
     <div className="app">
       <Header />
       <main>
-        <Hero />
+        <Me />
         <About />
         <Experience />
         <Skills />
