@@ -1,4 +1,4 @@
-import { Header } from './components/Header'
+import { Header } from './components/Header/Header.tsx'
 import { Me } from './components/Me'
 import { About } from './components/About'
 import { Experience } from './components/Experience'

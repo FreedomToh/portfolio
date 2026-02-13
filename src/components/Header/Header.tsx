@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import '../styles/Header.css'
+import cn from 'classnames'
+import styles from './header.module.less'
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -21,14 +22,13 @@ export function Header() {
   ]
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="header-container">
-        <a href="#" className="logo">
-          <span className="logo-text">AR</span>
+    <header className={cn(styles.header, {[styles.scrolled]: isScrolled})}>
+      <div className={styles.headerContainer}>
+        <a href="#" className={styles.logo}>
+          <span className={styles.logoText}>AR</span>
         </a>
-
-        <nav className={`nav ${isMobileMenuOpen ? 'open' : ''}`}>
-          <ul className="nav-list">
+        <nav className={cn(styles.nav, {[styles.open]: isMobileMenuOpen})}>
+          <ul className={styles.navList}>
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -43,7 +43,7 @@ export function Header() {
         </nav>
 
         <button
-          className={`mobile-menu-btn ${isMobileMenuOpen ? 'open' : ''}`}
+          className={cn(styles.mobileMenuBtn, {[styles.open]: isMobileMenuOpen})}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
