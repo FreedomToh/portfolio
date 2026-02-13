@@ -1,4 +1,4 @@
-import '../styles/Skills.css'
+import '../../styles/Skills.css'
 import type {JSX} from "react";
 
 interface SkillCategory {

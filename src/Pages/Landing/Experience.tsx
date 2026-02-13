@@ -1,4 +1,4 @@
-import '../styles/Experience.css'
+import '../../styles/Experience.css'
 
 interface Job {
   title: string

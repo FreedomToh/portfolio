@@ -16,7 +16,8 @@
     "less": "^4.5.1",
     "mime": "^4.1.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
     "@aws-sdk/client-cloudfront": "^3.986.0",

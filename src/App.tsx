@@ -1,10 +1,10 @@
-import { Header } from './components/Header/Header.tsx'
-import { Me } from './components/Me'
-import { About } from './components/About'
-import { Experience } from './components/Experience'
-import { Skills } from './components/Skills'
-import { Contact } from './components/Contact'
-import { Footer } from './components/Footer'
+import { Header } from './Pages/Landing/Header/Header.tsx'
+import { Me } from './Pages/Landing/Me/Me.tsx'
+import { About } from './Pages/Landing/About.tsx'
+import { Experience } from './Pages/Landing/Experience.tsx'
+import { Skills } from './Pages/Landing/Skills.tsx'
+import { Contact } from './Pages/Landing/Contact.tsx'
+import { Footer } from './Pages/Landing/Footer.tsx'
 import './styles/App.css'
 
 function App() {
