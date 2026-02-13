@@ -1,10 +1,11 @@
-import styles from './me.module.less'
+import styles from './baseInfo.module.less'
 import cn from 'classnames'
 import {Button} from "../../../components/Buttons/Button.tsx";
 import {ArrowRight} from "../../../UI/svg/ArrowRight.tsx";
 import {ButtonType} from "../../../components/Buttons/buttonParams.ts";
+import {ArrowDown} from "../../../UI/svg/ArrowDown.tsx";
 
-export function Me() {
+export function BaseInfo() {
   return (
     <section className={styles.root}>
       <div className={styles.rootBackground}>
@@ -62,14 +63,12 @@ export function Me() {
         </div>
       </div>
 
-      {/*<div className="scroll-indicator">*/}
-      {/*  <span>Scroll to explore</span>*/}
-      {/*  <div className="scroll-arrow">*/}
-      {/*    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">*/}
-      {/*      <path d="M12 5v14M19 12l-7 7-7-7"/>*/}
-      {/*    </svg>*/}
-      {/*  </div>*/}
-      {/*</div>*/}
+      <div className={styles.scrollIndicator}>
+        <span>Scroll to explore</span>
+        <div className={styles.scrollArrow}>
+          <ArrowDown />
+        </div>
+      </div>
     </section>
   )
 }
