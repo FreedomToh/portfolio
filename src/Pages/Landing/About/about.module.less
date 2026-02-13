@@ -6,35 +6,35 @@
     background: var(--color-bg-secondary);
   }
 
-  .content {
+  .rootContent {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-3xl);
     align-items: center;
   }
 
-  .text {
+  .rootText {
     max-width: 600px;
   }
 
-  .lead {
+  .rootLead {
     font-size: 1.25rem;
     color: var(--color-text);
     margin-bottom: var(--spacing-lg);
     line-height: 1.7;
   }
 
-  .lead strong {
+  .rootLead strong {
     color: var(--color-primary-light);
   }
 
-  .text p {
+  .rootText p {
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-lg);
     line-height: 1.7;
   }
 
-  .highlights {
+  .rootHighlights {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-lg);
@@ -54,70 +54,70 @@
   .highlight:hover {
     border-color: var(--color-primary);
     transform: translateX(4px);
+  }
 
-    .icon {
-      flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(34, 211, 238, 0.1));
-      border-radius: var(--radius-md);
-      color: var(--color-primary-light);
-    }
+  .highlightIcon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(34, 211, 238, 0.1));
+    border-radius: var(--radius-md);
+    color: var(--color-primary-light);
+  }
 
-    .content h4 {
+  .highlightContent {
+    h4 {
       font-size: 1rem;
       font-weight: 600;
       margin-bottom: var(--spacing-xs);
     }
-
-    .content p {
+    p {
       font-size: 0.875rem;
       color: var(--color-text-muted);
       margin: 0;
     }
   }
 
-  .image {
+  .rootImage {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .wrapper {
-      position: relative;
-    }
-
-    .placeholder {
-      width: 300px;
-      height: 300px;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .placeholder .initials {
-      font-size: 5rem;
-      font-weight: 800;
-      color: white;
-      opacity: 0.9;
-    }
-
-    .decoration {
-      position: absolute;
-      inset: -20px;
-      border: 2px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      transform: rotate(6deg);
-    }
   }
 
+  .imageWrapper {
+    position: relative;
+  }
+
+  .imagePlaceholder {
+    width: 300px;
+    height: 300px;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .imagePlaceholder .initials {
+    font-size: 5rem;
+    font-weight: 800;
+    color: white;
+    opacity: 0.9;
+  }
+
+  .imageDecoration {
+    position: absolute;
+    inset: -20px;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    transform: rotate(6deg);
+  }
 
   .techFloat {
     position: absolute;
@@ -132,48 +132,59 @@
     animation: float 4s ease-in-out infinite;
   }
 
-  .tech1 {
+  .techPython {
     top: 20px;
     left: 0;
     animation-delay: 0s;
   }
 
-  .tech2 {
+  .techFastApi {
+    top: -100px;
+    left: 200px;
+    animation-delay: 0s;
+  }
+
+  .techDjango {
+    top: -80px;
+    left: 350px;
+    animation-delay: 0s;
+  }
+
+  .techReact {
     top: 60px;
     right: -20px;
     animation-delay: 0.5s;
   }
 
-  .tech3 {
+  .techAWS {
     bottom: 80px;
     left: -40px;
     animation-delay: 1s;
   }
 
-  .tech4 {
+  .techPostgres {
     bottom: 20px;
     right: 0;
     animation-delay: 1.5s;
   }
 
   @media (max-width: 968px) {
-    .content {
+    .rootContent {
       grid-template-columns: 1fr;
       gap: var(--spacing-2xl);
     }
 
-    .image {
+    .rootImage {
       order: -1;
+    }
 
-      .placeholder {
-        width: 250px;
-        height: 250px;
-      }
+    .imagePlaceholder {
+      width: 250px;
+      height: 250px;
+    }
 
-      .placeholder .initials {
-        font-size: 4rem;
-      }
+    .imagePlaceholder .initials {
+      font-size: 4rem;
     }
   }
-
 }

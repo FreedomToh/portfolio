@@ -15,9 +15,9 @@ export function About() {
           </h2>
         </div>
 
-        <div className={styles.content}>
-          <div className={styles.text}>
-            <p className={styles.lead}>
+        <div className={styles.rootContent}>
+          <div className={styles.rootText}>
+            <p className={styles.rootLead}>
               Full-stack engineer with <strong>9+ years of experience</strong> in backend
               and web application development using Python, Django REST Framework, and React.
             </p>
@@ -33,32 +33,32 @@ export function About() {
               performance optimization, and user experience.
             </p>
 
-            <div className={styles.highlights}>
-              <div className={styles.highlights}>
-                <div className={styles.icon}>
+            <div className={styles.rootHighlights}>
+              <div className={styles.highlight}>
+                <div className={styles.highlightIcon}>
                   <StackImg />
                 </div>
-                <div className={styles.content}>
+                <div className={styles.highlightContent}>
                   <h4>Architecture Design</h4>
                   <p>Designing scalable microservices and cloud-native solutions</p>
                 </div>
               </div>
 
-              <div className={styles.highlights}>
-                <div className={styles.icon}>
+              <div className={styles.highlight}>
+                <div className={styles.highlightIcon}>
                   <DisplayImg />
                 </div>
-                <div className={styles.content}>
+                <div className={styles.highlightContent}>
                   <h4>Full-stack Development</h4>
                   <p>End-to-end web application development from concept to deployment</p>
                 </div>
               </div>
 
-              <div className={styles.highlights}>
-                <div className={styles.icon}>
+              <div className={styles.highlight}>
+                <div className={styles.highlightIcon}>
                   <BoxImg />
                 </div>
-                <div className={styles.content}>
+                <div className={styles.highlightContent}>
                   <h4>Cloud & DevOps</h4>
                   <p>AWS infrastructure, Linux administration, and CI/CD pipelines</p>
                 </div>
@@ -66,18 +66,20 @@ export function About() {
             </div>
           </div>
 
-          <div className={styles.image}>
-            <div className={styles.wrapper}>
-              <div className={styles.placeholder}>
+          <div className={styles.rootImage}>
+            <div className={styles.imageWrapper}>
+              <div className={styles.imagePlaceholder}>
                 <span className={styles.initials}>AR</span>
               </div>
-              <div className={styles.decoration}></div>
+              <div className={styles.imageDecoration}></div>
             </div>
 
-            <div className={cn(styles.techFloat, styles.tech1)}>Python</div>
-            <div className={cn(styles.techFloat, styles.tech2)}>React</div>
-            <div className={cn(styles.techFloat, styles.tech3)}>AWS</div>
-            <div className={cn(styles.techFloat, styles.tech4)}>PostgreSQL</div>
+            <div className={cn(styles.techFloat, styles.techPython)}>Python</div>
+            <div className={cn(styles.techFloat, styles.techReact)}>React</div>
+            <div className={cn(styles.techFloat, styles.techAWS)}>AWS</div>
+            <div className={cn(styles.techFloat, styles.techPostgres)}>PostgreSQL</div>
+            <div className={cn(styles.techFloat, styles.techFastApi)}>FastAPi</div>
+            <div className={cn(styles.techFloat, styles.techDjango)}>Django</div>
           </div>
         </div>
       </div>
