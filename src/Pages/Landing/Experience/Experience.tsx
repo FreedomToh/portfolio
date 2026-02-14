@@ -1,4 +1,5 @@
-import '../../styles/Experience.css'
+import styles from './experience.module.less'
+import {CheckMarkImg} from "../../../UI/svg/CheckMarkImg.tsx";
 
 interface Job {
   title: string
@@ -66,33 +67,33 @@ const jobs: Job[] = [
 
 export function Experience() {
   return (
-    <section id="experience" className="experience">
-      <div className="container">
-        <div className="section-header">
-          <span className="section-tag">Career Path</span>
-          <h2 className="section-title">
+    <section id="experience" className={styles.experience}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionTag}>Career Path</span>
+          <h2 className={styles.sectionTitle}>
             Professional Experience
           </h2>
         </div>
 
-        <div className="timeline">
+        <div className={styles.timeline}>
           {jobs.map((job, index) => (
-            <div key={index} className="timeline-item">
-              <div className="timeline-marker">
-                <div className="marker-dot"></div>
-                {index < jobs.length - 1 && <div className="marker-line"></div>}
+            <div key={index} className={styles.timelineItem}>
+              <div className={styles.timelineMarker}>
+                <div className={styles.markerDot}></div>
+                {index < jobs.length - 1 && <div className={styles.markerLine}></div>}
               </div>
 
-              <div className="timeline-content">
-                <div className="job-header">
-                  <div className="job-info">
-                    <h3 className="job-title">{job.title}</h3>
-                    <p className="job-company">{job.company}</p>
+              <div className={styles.timelineContent}>
+                <div className={styles.jobHeader}>
+                  <div className={styles.jobInfo}>
+                    <h3 className={styles.jobTitle}>{job.title}</h3>
+                    <p className={styles.jobCompany}>{job.company}</p>
                   </div>
-                  <span className="job-period">{job.period}</span>
+                  <span className={styles.jobPeriod}>{job.period}</span>
                 </div>
 
-                <div className="job-description">
+                <div className={styles.jobDescription}>
                   <ul>
                     {job.description.map((item, i) => (
                       <li key={i}>{item}</li>
@@ -100,14 +101,12 @@ export function Experience() {
                   </ul>
                 </div>
 
-                <div className="job-achievements">
+                <div className={styles.jobAchievements}>
                   <h4>Key Achievements</h4>
                   <ul>
                     {job.achievements.map((achievement, i) => (
                       <li key={i}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <polyline points="20 6 9 17 4 12"/>
-                        </svg>
+                        <CheckMarkImg />
                         {achievement}
                       </li>
                     ))}

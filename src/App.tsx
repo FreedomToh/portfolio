@@ -1,7 +1,7 @@
 import { Header } from './Pages/Landing/Header/Header.tsx'
 import { BaseInfo } from './Pages/Landing/BaseInfo/BaseInfo.tsx'
 import { About } from './Pages/Landing/About/About.tsx'
-import { Experience } from './Pages/Landing/Experience.tsx'
+import { Experience } from './Pages/Landing/Experience/Experience.tsx'
 import { Skills } from './Pages/Landing/Skills.tsx'
 import { Contact } from './Pages/Landing/Contact.tsx'
 import { Footer } from './Pages/Landing/Footer.tsx'
