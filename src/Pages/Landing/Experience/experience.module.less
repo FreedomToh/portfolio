@@ -6,7 +6,7 @@
   }
 
   .timeline {
-    max-width: 800px;
+    width: 800px;
     margin: 0 auto;
   }
 
@@ -87,6 +87,21 @@
     white-space: nowrap;
   }
 
+  .jobDescription, .jobSkills{
+    max-width: 400px;
+  }
+
+  .jobSkills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+
+    flex-wrap: wrap;
+  }
+
+
   .jobDescription ul {
     list-style: none;
     margin-bottom: var(--spacing-lg);
@@ -166,6 +181,11 @@
     .jobHeader {
       flex-direction: column;
     }
+  }
+
+  .stack {
+    display: flex;
+    flex-direction: row;
   }
 
 }
