@@ -1,6 +1,6 @@
 import styles from "./about.module.less"
-import {StackImg} from "../../../UI/svg/StackImg.tsx";
-import {DisplayImg} from "../../../UI/svg/DisplayImg.tsx";
+import { StackImg } from "../../../UI/svg/StackImg.tsx";
+import { DisplayImg } from "../../../UI/svg/DisplayImg.tsx";
 import { BoxImg } from "../../../UI/svg/BoxImg.tsx";
 import cn from "classnames";
 
@@ -74,12 +74,14 @@ export const About = () => {
               <div className={styles.imageDecoration}></div>
             </div>
 
-            <div className={cn(styles.techFloat, styles.techPython)}>Python</div>
-            <div className={cn(styles.techFloat, styles.techReact)}>React</div>
-            <div className={cn(styles.techFloat, styles.techAWS)}>AWS</div>
-            <div className={cn(styles.techFloat, styles.techPostgres)}>PostgreSQL</div>
-            <div className={cn(styles.techFloat, styles.techFastApi)}>FastAPi</div>
-            <div className={cn(styles.techFloat, styles.techDjango)}>Django</div>
+            <div className={styles.techFloatGroup}>
+              <div className={cn(styles.techFloat, styles.techPython)}>Python</div>
+              <div className={cn(styles.techFloat, styles.techReact)}>React</div>
+              <div className={cn(styles.techFloat, styles.techAWS)}>AWS</div>
+              <div className={cn(styles.techFloat, styles.techPostgres)}>PostgreSQL</div>
+              <div className={cn(styles.techFloat, styles.techFastApi)}>FastAPi</div>
+              <div className={cn(styles.techFloat, styles.techDjango)}>Django</div>
+            </div>
           </div>
         </div>
       </div>

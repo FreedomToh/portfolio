@@ -74,6 +74,7 @@
       font-weight: 600;
       margin-bottom: var(--spacing-xs);
     }
+
     p {
       font-size: 0.875rem;
       color: var(--color-text-muted);
@@ -170,8 +171,8 @@
 
   @media (max-width: 968px) {
     .rootContent {
-      grid-template-columns: 1fr;
-      gap: var(--spacing-2xl);
+      display: flex;
+      flex-direction: column;
     }
 
     .rootImage {
@@ -185,6 +186,10 @@
 
     .imagePlaceholder .initials {
       font-size: 4rem;
+    }
+
+    .techFloat {
+      display: none;
     }
   }
 }
