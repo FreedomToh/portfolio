@@ -5,7 +5,7 @@ import {ArrowRight} from "../../../UI/svg/ArrowRight.tsx";
 import {ButtonType} from "../../../components/Buttons/buttonParams.ts";
 import {ArrowDown} from "../../../UI/svg/ArrowDown.tsx";
 
-export function BaseInfo() {
+export const BaseInfo = () => {
   return (
     <section className={styles.root}>
       <div className={styles.rootBackground}>

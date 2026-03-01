@@ -71,7 +71,7 @@ const jobs: Job[] = [
     },
 ]
 
-export function Experience() {
+export const Experience = () => {
     return (
         <section id="experience" className={styles.experience}>
             <div className={styles.container}>

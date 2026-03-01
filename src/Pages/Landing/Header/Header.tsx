@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import cn from 'classnames'
 import styles from './header.module.less'
 
-export function Header() {
+export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 

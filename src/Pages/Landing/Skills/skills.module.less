@@ -1,0 +1,80 @@
+@import "../../../App.module";
+
+:local {
+    .skills {
+        padding: var(--spacing-3xl) 0;
+        background: var(--color-bg-secondary);
+    }
+
+    .skillsGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: var(--spacing-lg);
+    }
+
+    .skillCard {
+        padding: var(--spacing-xl);
+        background: var(--color-surface);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--color-border);
+        transition: all var(--transition-base);
+    }
+
+    .skillCard:hover {
+        border-color: var(--color-primary);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+    }
+
+    .skillCardHeader {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .skillIcon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(34, 211, 238, 0.1));
+        border-radius: var(--radius-md);
+        color: var(--color-primary-light);
+    }
+
+    .skillCategory {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--color-text);
+    }
+
+    .skillTags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+
+    .skillTag {
+        padding: var(--spacing-xs) var(--spacing-md);
+        background: var(--color-bg-tertiary);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        font-size: 0.875rem;
+        color: var(--color-text-secondary);
+        transition: all var(--transition-fast);
+    }
+
+    .skillCard:hover .skillTag {
+        border-color: var(--color-primary);
+        color: var(--color-text);
+    }
+
+    @media (max-width: 640px) {
+        .skillsGrid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+}

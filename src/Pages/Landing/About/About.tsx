@@ -4,7 +4,7 @@ import {DisplayImg} from "../../../UI/svg/DisplayImg.tsx";
 import { BoxImg } from "../../../UI/svg/BoxImg.tsx";
 import cn from "classnames";
 
-export function About() {
+export const About = () => {
   return (
     <section id="about" className={styles.root}>
       <div className={styles.container}>
