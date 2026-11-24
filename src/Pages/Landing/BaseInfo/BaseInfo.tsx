@@ -34,7 +34,7 @@ export const BaseInfo = () => {
         </p>
 
         <p className={styles.rootDescription}>
-          Building scalable web applications with 9+ years of experience
+          Building scalable web applications with 10+ years of experience
           in backend development, microservices architecture, and modern frontend technologies.
         </p>
 
@@ -49,7 +49,7 @@ export const BaseInfo = () => {
 
         <div className={styles.rootStats}>
           <div className={styles.stat}>
-            <span className={styles.statNumber}>9+</span>
+            <span className={styles.statNumber}>10+</span>
             <span className={styles.statLabel}>Years Experience</span>
           </div>
           <div className={styles.stat}>

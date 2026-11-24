@@ -6,6 +6,7 @@ import { Skills } from './Pages/Landing/Skills/Skills.tsx'
 import { Contact } from './Pages/Landing/Contacts/Contact.tsx'
 import { Footer } from './Pages/Landing/Footer/Footer.tsx'
 import './App.css'
+import { ChatWithMe } from './Pages/Landing/ChatWithMe/ChatWithMe.tsx'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Experience />
         <Skills />
         <Contact />
+        <ChatWithMe />
       </main>
       <Footer />
     </div>

@@ -33,11 +33,11 @@ const contactLinks: ContactLink[] = [
     href: 'https://www.linkedin.com/in/anton-rodin-46451725b/',
   },
   {
-    icon: <PhoneIco />,
-    label: 'Phone',
-    value: '+8107085198184',
-    href: 'tel:+8107085198184',
-  },
+    icon: <TelegramIco />,
+    label: "Chat with me",
+    value: "Start chating",
+    href: "#chat"
+  }
 ]
 
 export const Contact = () => {

@@ -18,8 +18,8 @@ export const About = () => {
         <div className={styles.rootContent}>
           <div className={styles.rootText}>
             <p className={styles.rootLead}>
-              Full-stack engineer with <strong>9+ years of experience</strong> in backend
-              and web application development using Python, Django REST Framework, and React.
+              Full-stack engineer with <strong>10+ years of experience</strong> in backend
+              and web application development using Python, FastAPI, Django REST Framework, and React.
             </p>
 
             <p>

@@ -1,6 +1,6 @@
 import styles from './experience.module.less'
-import {CheckMarkImg} from "../../../UI/svg/CheckMarkImg.tsx";
-import {Tag} from "../../../components/Tag/Tag.tsx";
+import {CheckMarkImg} from "@/UI/svg/CheckMarkImg.tsx";
+import {Tag} from "@/components/Tag/Tag.tsx";
 
 interface Job {
     title: string
@@ -13,9 +13,26 @@ interface Job {
 
 const jobs: Job[] = [
     {
+        title: 'Senior Full-stack Engineer',
+        company: 'Apple Japan',
+        period: 'May 2026 – Present',
+        description: [
+            'Full-stack web application development using Python/React',
+            'Improve the company’s internal services',
+            'Integration of AI agents into internal product development ',
+        ],
+        skills: ["Python", "React", "FastAPI", "MongoSQL", "RMQ", "MCP", "AI"],
+        achievements: [
+            'Migrating a legacy backend services using modern FastAPI and Pydantic.',
+            'Redesign of the project`s frontend and migration to modern React with tanstack/react-query and TailwindCSS',
+            'Designed and implemented many (MCP) servers',
+            'Integrated AI-assisted workflows into development processes'
+        ],
+    },
+    {
         title: 'Full-stack Engineer',
         company: 'Honki-mode Co., Ltd.',
-        period: 'May 2024 – Present',
+        period: 'May 2024 – May 2026',
         description: [
             'Full-stack web application development using Python/React',
             'Backend development for POS applications',
@@ -71,6 +88,54 @@ const jobs: Job[] = [
     },
 ]
 
+const JobPoint = ({idx, job}: {idx: number, job: Job}) => {
+    return(
+        <div className={styles.timelineItem}>
+            <div className={styles.timelineMarker}>
+                <div className={styles.markerDot}></div>
+                {idx < jobs.length - 1 && <div className={styles.markerLine}></div>}
+            </div>
+
+            <div className={styles.timelineContent}>
+                <div className={styles.jobHeader}>
+                    <div className={styles.jobInfo}>
+                        <h3 className={styles.jobTitle}>{job.title}</h3>
+                        <p className={styles.jobCompany}>{job.company}</p>
+                    </div>
+                    <span className={styles.jobPeriod}>{job.period}</span>
+                </div>
+
+                <div className={styles.stack} style={{justifyContent: "space-between"}}>
+                    <div className={styles.jobDescription}>
+                        <ul>
+                            {job.description.map((item, i) => (
+                                <li key={i}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div className={styles.jobSkills}>
+                        {job.skills.map((item, i) => (
+                            <Tag name={item} key={i}/>
+                        ))}
+                    </div>
+                </div>
+
+                <div className={styles.jobAchievements}>
+                    <h4>Key Achievements</h4>
+                    <ul>
+                        {job.achievements.map((achievement, i) => (
+                            <li key={i}>
+                                <CheckMarkImg/>
+                                {achievement}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 export const Experience = () => {
     return (
         <section id="experience" className={styles.experience}>
@@ -84,49 +149,7 @@ export const Experience = () => {
 
                 <div className={styles.timeline}>
                     {jobs.map((job, index) => (
-                        <div key={index} className={styles.timelineItem}>
-                            <div className={styles.timelineMarker}>
-                                <div className={styles.markerDot}></div>
-                                {index < jobs.length - 1 && <div className={styles.markerLine}></div>}
-                            </div>
-
-                            <div className={styles.timelineContent}>
-                                <div className={styles.jobHeader}>
-                                    <div className={styles.jobInfo}>
-                                        <h3 className={styles.jobTitle}>{job.title}</h3>
-                                        <p className={styles.jobCompany}>{job.company}</p>
-                                    </div>
-                                    <span className={styles.jobPeriod}>{job.period}</span>
-                                </div>
-
-                                <div className={styles.stack} style={{justifyContent: "space-between"}}>
-                                    <div className={styles.jobDescription}>
-                                        <ul>
-                                            {job.description.map((item, i) => (
-                                                <li key={i}>{item}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                    <div className={styles.jobSkills}>
-                                        {job.skills.map((item, i) => (
-                                            <Tag name={item} key={i}/>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                <div className={styles.jobAchievements}>
-                                    <h4>Key Achievements</h4>
-                                    <ul>
-                                        {job.achievements.map((achievement, i) => (
-                                            <li key={i}>
-                                                <CheckMarkImg/>
-                                                {achievement}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <JobPoint key={index} idx={index} job={job} />
                     ))}
                 </div>
             </div>

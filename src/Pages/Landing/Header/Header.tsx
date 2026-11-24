@@ -19,6 +19,7 @@ export const Header = () => {
     { href: '#experience', label: 'Experience' },
     { href: '#skills', label: 'Skills' },
     { href: '#contact', label: 'Contact' },
+    { href: '#chat', label: 'Chat with me' },
   ]
 
   return (
